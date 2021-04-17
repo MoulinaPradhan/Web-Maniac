@@ -1,0 +1,31 @@
+{
+  "name": "web-maniac",
+  "version": "1.0.0",
+  "description": "Equinox Shopping Site",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoulinaPradhan/Web-Maniac.git"
+  },
+  "author": "Moulina Pradhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoulinaPradhan/Web-Maniac/issues"
+  },
+  "homepage": "https://github.com/MoulinaPradhan/Web-Maniac#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container, NavDropdown ,FormControl,Form,Button} from 'react-bootstrap'
+import SearchBox from './SearchBox'
 const NavHeader = () => {
+  const [userInfo,setuserInfo] = useState(false)
     return (
         <>
         <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
@@ -16,7 +18,9 @@ const NavHeader = () => {
               src ="https://equinox.iiitl.ac.in/img/equinox_logo_white.png"/>
               {/* Equinox Hub */}
               </Navbar.Brand>
+          
           </LinkContainer>
+              <SearchBox/>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
            
@@ -26,7 +30,22 @@ const NavHeader = () => {
                   <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
               </LinkContainer>
-          
+              {userInfo ? (
+                <NavDropdown title={userInfo.name} id='username'>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <NavDropdown.Item>
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              ) : (
+                <LinkContainer to='/login'>
+                  <Nav.Link>
+                    <i className='fas fa-user'></i> Sign In
+                  </Nav.Link>
+                </LinkContainer>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

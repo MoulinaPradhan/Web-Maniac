@@ -1,6 +1,33 @@
 # Web-Maniac
 A web development event at Equinox 2021
 
+
+### Install Dependencies (frontend & backend)
+
+```
+npm install
+cd frontend
+npm install
+```
+
+### Run
+
+```
+# Run frontend (:3000) & backend (:5000)
+npm run dev
+
+# Run backend only
+npm run server
+```
+
+## Build & Deploy
+
+```
+# Create frontend prod build
+cd frontend
+npm run build
+```
+
 # Problem Statement: [Link](https://docs.google.com/document/d/1n1aUeYUc5eFE6w5OUJU_sHbXdyFG3M3cieLSGTSDd0A/edit?usp=sharing)
 
 1. Fork this respository
