@@ -1,10 +1,13 @@
-
+import React from 'react';
+import {BrowserRouter as Router,Route} from 'react-router-dom'
+import {HomeScreen} from './screens'
 
 function App() {
   return (
-    <div className="App">
-   
-    </div>
+    <Router>
+   <HomeScreen/>
+
+    </Router>
   );
 }
 
